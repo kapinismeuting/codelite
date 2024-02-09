@@ -6,7 +6,7 @@
         <div class="custom-row align-items-end justify-content-between">
           <div class="left-content">
             <a href="/" class="logo">
-              <img src="{{ mix('img/imgs/codelitewhite.png') }}" alt="Logo" height="60"/>
+              <img src="{{ mix('img/imgs/codelitelogodark.png') }}" alt="Logo" height="60"/>
             </a>
             <p>We provide the expertise and support to <br>
               propel your business forward.</p>

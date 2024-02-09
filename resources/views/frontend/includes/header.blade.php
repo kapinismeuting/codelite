@@ -5,7 +5,7 @@
       <div class="custom-row align-items-center justify-content-between">
         <div class="header-left d-flex align-items-center">
           <a href="/" class="logo">
-            <img src="{{ mix('img/imgs/codelite.png') }}" alt="Logo" />
+            <img src="{{ mix('img/imgs/codelitelogolight.png') }}" alt="Logo" />
           </a>
 
           <div class="header-left-right">
