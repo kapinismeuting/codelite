@@ -9,9 +9,11 @@
         </x-slot>
 
         <x-slot name="body">
-            @lang('Welcome to the Dashboard')
+            @lang('Welcome to Image Library')
+            <div class="py-4">
+                <livewire:backend.image-library />
+            </div>
         </x-slot>
     </x-backend.card>
 
-    <livewire:backend.image-library />
 @endsection

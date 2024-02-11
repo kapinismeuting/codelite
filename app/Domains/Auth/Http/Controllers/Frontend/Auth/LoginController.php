@@ -25,7 +25,23 @@ class LoginController
     |
     */
 
-    use AuthenticatesUsers;
+    use AuthenticatesUsers; 
+
+    // protected function sendLoginResponse(Request $request)
+    // {
+    //     $this->clearLoginAttempts($request);
+
+    //     $token = auth()->user()->createToken('api-token')->plainTextToken;
+
+    //     return response()->json(['token' => $token], 200);
+    // }
+
+    // protected function sendFailedLoginResponse(Request $request)
+    // {
+    //     throw new HttpResponseException(
+    //         response()->json(['error' => trans('auth.failed')], 401)
+    //     );
+    // }
 
     /**
      * Where to redirect users after login.
@@ -102,7 +118,12 @@ class LoginController
             auth()->logout();
 
             return redirect()->route('frontend.auth.login')->withFlashDanger(__('Your account has been deactivated.'));
-        }
+        } 
+        // elseif (! $user->isActive()) {
+        //     auth()->logout();
+
+        //     return response()->json(['error' => 'Your account has been deactivated.'], 401);
+        // }
 
         event(new UserLoggedIn($user));
 

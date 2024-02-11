@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Backend\ImageController;
+use App\Domains\Auth\Http\Controllers\Frontend\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,12 @@ use Illuminate\Http\Request;
 |
 */
 
-//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+   return $request->user();
+});
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('images', ImageController::class);
+    Route::post('login', [LoginController::class, 'login']);
+});
+

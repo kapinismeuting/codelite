@@ -1,0 +1,1 @@
+<input {{ $attributes->merge(['class' => 'my-2', 'type' => $type, 'placeholder' => $placeholder, 'wire:model' => $model]) }}>
